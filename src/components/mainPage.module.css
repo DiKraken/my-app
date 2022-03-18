@@ -1,0 +1,11 @@
+.mainPageWrapper {
+    height: 100vh;
+    padding: 1%;
+}
+
+.taskCard {
+    background: #282c34;
+    margin: 0 auto;
+    width: 20%;
+    color: white;
+}
