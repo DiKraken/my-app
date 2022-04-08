@@ -1,28 +1,14 @@
 import React from 'react';
 import classes from './mainPage.module.css'
+import TaskCard from "./TaskCard";
 
 
 const MainPage = (props) => {
     return (
         <div className={classes.mainPageWrapper}>
-
-            {props.tasks.map(task => (
-                    <div className={classes.taskCard} key={task.id}>
-                        <div>{task.title}</div>
-                        <div>{task.description}</div>
-                        <div>{task.deadline.getFullYear()+'-'+(task.deadline.getMonth()+1)+'-'+task.deadline.getDate()}</div>
-                    </div>
-                )
-            )}
+            {props.tasks.map(task => <TaskCard task={task} key={task.id}/>)}
         </div>
     )
 }
 
-
-// UPPER_CASE
-// snake_case
-
-{/* {JSON.stringify(props)}*/
-}
-
-export default (MainPage)
+export default MainPage
