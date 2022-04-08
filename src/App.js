@@ -3,7 +3,6 @@ import './App.css';
 import MainPage from './components/MainPage'
 import {TASK_TEST_LIST} from "./constants";
 import {useState, useEffect} from "react";
-import Bonuses from "./components/bonuses/Bonuses";
 
 function App() {
     //auth
@@ -21,7 +20,6 @@ function App() {
 
     useEffect(() => {
         setTimeout(() =>
-
             setTasks(TASK_TEST_LIST)
         )
 
@@ -29,8 +27,7 @@ function App() {
 
     return (
         <div className="App">
-            {/*<MainPage tasks={tasks}/>*/}
-            <Bonuses/>
+            <MainPage tasks={tasks}/>
         </div>
     );
 }
